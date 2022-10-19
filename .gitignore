@@ -53,3 +53,7 @@ dkms.conf
 
 # Cmake build directory
 build
+
+# for zig
+/zig-out/
+/zig-cache/
