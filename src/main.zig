@@ -89,5 +89,12 @@ pub fn main() void {
         h.lua_pop(L, h.lua_gettop(L));
     }
 
-    // todo: register module
+    // return error
+    {
+        const erred = h.luaL_dostring(L, "print(return)");
+        if (erred) {
+            print("error: {s}\n", .{h.lua_tolstring(L, h.lua_gettop(L), 0)});
+            h.lua_pop(L, h.lua_gettop(L));
+        }
+    }
 }

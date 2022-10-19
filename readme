@@ -1,0 +1,11 @@
+
+
+## Requirements
+- zig 0.10
+- luajit
+
+
+## How to Use
+
+* `zig build -Drelease-safe` # build .so for lua
+* `zig build run`
